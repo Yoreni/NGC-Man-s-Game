@@ -4,12 +4,12 @@
 <script>
 var game = {
 	coins:new Decimal(1),
-	incomes:[new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0)],
-	costs:[new Decimal(1),new Decimal(100),new Decimal(1e4),new Decimal(1e7),new Decimal(1e10),new Decimal(1e14),new Decimal(1e18),new Decimal(1e23)],
-	costmult:[2,3,4,6,10,15,25,40],
-	amounts:[new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0)],
-	multipliers:[new Decimal(1),new Decimal(1),new Decimal(1),new Decimal(1),new Decimal(1),new Decimal(1),new Decimal(1),new Decimal(1)],
-	progress:[0,0,0,0,0,0,0,0],
+	incomes:[new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0)],
+	costs:[new Decimal(1),new Decimal(100),new Decimal(1e4),new Decimal(1e7),new Decimal(1e10),new Decimal(1e14),new Decimal(1e18),new Decimal(1e23),new Decimal(1e28],
+	costmult:[2,2,2,2,2,2,2,2,2],
+	amounts:[new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0)],
+	multipliers:[new Decimal(1),new Decimal(1),new Decimal(1),new Decimal(1),new Decimal(1),new Decimal(1),new Decimal(1),new Decimal(1),new Decimal(1)],
+	progress:[0,0,0,0,0,0,0,0,0],
 	totalCoins:new Decimal(0),
 	prestigeCount:0,
 	boost:new Decimal(1),
@@ -80,13 +80,13 @@ function getUC() {
 }
 function prestige() {
 	game = {
-		coins:new Decimal(1),
-		incomes:[new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0)],
-		costs:[new Decimal(1),new Decimal(100),new Decimal(1e4),new Decimal(1e7),new Decimal(1e10),new Decimal(1e14),new Decimal(1e18),new Decimal(1e23)],
-		costmult:[2,3,4,6,10,15,25,40],
-		amounts:[new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0)],
-		multipliers:[getprestige(),getprestige(),getprestige(),getprestige(),getprestige(),getprestige(),getprestige(),getprestige()],
-		progress:[0,0,0,0,0,0,0,0],
+	coins:new Decimal(1),
+	incomes:[new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0)],
+	costs:[new Decimal(1),new Decimal(100),new Decimal(1e4),new Decimal(1e7),new Decimal(1e10),new Decimal(1e14),new Decimal(1e18),new Decimal(1e23),new Decimal(1e28],
+	costmult:[2,2,2,2,2,2,2,2,2],
+	amounts:[new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0)],
+	multipliers:[new Decimal(1),new Decimal(1),new Decimal(1),new Decimal(1),new Decimal(1),new Decimal(1),new Decimal(1),new Decimal(1),new Decimal(1)],
+	progress:[0,0,0,0,0,0,0,0,0],
 		prestigeCount:game.prestigeCount+1,
 		boost:getprestige(),
 		notation:game.notation,
@@ -103,13 +103,13 @@ function prestige() {
 }
 function upgrade() {
 	game = {
-		coins:new Decimal(1),
-		incomes:[new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0)],
-		costs:[new Decimal(1),new Decimal(100),new Decimal(1e4),new Decimal(1e7),new Decimal(1e10),new Decimal(1e14),new Decimal(1e18),new Decimal(1e23)],
-		costmult:[2,3,4,6,10,15,25,40],
-		amounts:[new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0)],
-		multipliers:[new Decimal(1),new Decimal(1),new Decimal(1),new Decimal(1),new Decimal(1),new Decimal(1),new Decimal(1),new Decimal(1)],
-		progress:[0,0,0,0,0,0,0,0],
+	coins:new Decimal(1),
+	incomes:[new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0)],
+	costs:[new Decimal(1),new Decimal(100),new Decimal(1e4),new Decimal(1e7),new Decimal(1e10),new Decimal(1e14),new Decimal(1e18),new Decimal(1e23),new Decimal(1e28],
+	costmult:[2,2,2,2,2,2,2,2,2],
+	amounts:[new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0)],
+	multipliers:[new Decimal(1),new Decimal(1),new Decimal(1),new Decimal(1),new Decimal(1),new Decimal(1),new Decimal(1),new Decimal(1),new Decimal(1)],
+	progress:[0,0,0,0,0,0,0,0,0],
 		prestigeCount:0,
 		boost:new Decimal(1),
 		notation:game.notation,
@@ -125,13 +125,13 @@ function upgrade() {
 function hardReset() {
 	if(confirm("Are you sure you want to hard reset? This will erase all your progress.")) {
 		game = {
-			coins:new Decimal(1),
-			incomes:[new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0)],
-			costs:[new Decimal(1),new Decimal(100),new Decimal(1e4),new Decimal(1e7),new Decimal(1e10),new Decimal(1e14),new Decimal(1e18),new Decimal(1e23)],
-			costmult:[2,3,4,6,10,15,25,40],
-			amounts:[new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0)],
-			multipliers:[new Decimal(1),new Decimal(1),new Decimal(1),new Decimal(1),new Decimal(1),new Decimal(1),new Decimal(1),new Decimal(1)],
-			progress:[0,0,0,0,0,0,0,0],
+	coins:new Decimal(1),
+	incomes:[new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0)],
+	costs:[new Decimal(1),new Decimal(100),new Decimal(1e4),new Decimal(1e7),new Decimal(1e10),new Decimal(1e14),new Decimal(1e18),new Decimal(1e23),new Decimal(1e28],
+	costmult:[2,2,2,2,2,2,2,2,2],
+	amounts:[new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0),new Decimal(0)],
+	multipliers:[new Decimal(1),new Decimal(1),new Decimal(1),new Decimal(1),new Decimal(1),new Decimal(1),new Decimal(1),new Decimal(1),new Decimal(1)],
+	progress:[0,0,0,0,0,0,0,0,0],
 			totalCoins:new Decimal(0),
 			prestigeCount:0,
 			boost:new Decimal(1),
@@ -188,19 +188,19 @@ function step() {
 	const s = (new Date().getTime()-game.time)/1000
 	game.time = new Date().getTime()
 	game.timePlayed+=s
-	for(let i=7;i>=1;i--) game.amounts[i-1] = game.amounts[i-1].add(game.incomes[i].mul(s))
+	for(let i=8;i>=1;i--) game.amounts[i-1] = game.amounts[i-1].add(game.incomes[i].mul(s))
  	game.coins = game.coins.add(game.incomes[0].mul(s))
 	game.totalCoins = game.totalCoins.add(game.incomes[0].mul(s))
-	for(let i=1;i<=8;i++) game.incomes[i-1] = game.amounts[i-1].mul(game.multipliers[i-1])
+	for(let i=1;i<=9;i++) game.incomes[i-1] = game.amounts[i-1].mul(game.multipliers[i-1])
 	update("coinbox",format(game.coins))
 	update("incomebox",format(game.incomes[0]))
-	for(let i=1;i<=8;i++) {
+	for(let i=1;i<=9;i++) {
 		update("a"+i,format(game.amounts[i-1]))
 		update("c"+i,format(game.costs[i-1]))
 		update("m"+i,format(game.multipliers[i-1]))
 		update("p"+i,game.progress[i-1])
 	}
-	for(let i=1;i<=7;i++) update("i"+i,format(game.incomes[i]))
+	for(let i=1;i<=8;i++) update("i"+i,format(game.incomes[i]))
 	update("totalCoinDisplay",format(game.totalCoins))
 	update("playTime",displayTime(game.timePlayed))
 	update("prestigeTimes",game.prestigeCount)
@@ -232,7 +232,7 @@ function load(save) {
 		if (game.upgrades===undefined) game.upgrades=[]
 		if (game.achievements===undefined) game.achievements=[]
 		
-		for(let i=0;i<=7;i++) {
+		for(let i=0;i<=8;i++) {
 			game.multipliers[i] = new Decimal(game.multipliers[i])
 			game.amounts[i] = new Decimal(game.amounts[i])
 			game.costs[i] = new Decimal(game.costs[i])
@@ -244,13 +244,13 @@ function load(save) {
 		
 		update("coinbox",format(game.coins))
 		update("incomebox",format(game.incomes[0]))
-		for(let i=1;i<=8;i++) {
+		for(let i=1;i<=9;i++) {
 			update("a"+i,format(game.amounts[i-1]))
 			update("c"+i,format(game.costs[i-1]))
 			update("m"+i,format(game.multipliers[i-1]))
 			update("p"+i,format(game.progress[i-1]))
 		}
-		for(let i=1;i<=7;i++) update("i"+i,format(game.incomes[i]))
+		for(let i=1;i<=8;i++) update("i"+i,format(game.incomes[i]))
 		update("notationID",notationArray[game.notation])
 		update("prestmult",getprestige())
 	} catch (e) {
@@ -313,6 +313,7 @@ You are getting <b id="incomebox">0</b> coins per second.<br>
 <button onclick="buy(6)" id="b6">Level 6 x<span id="m6">1</span><br>Cost: <span id="c6">1e14</span><br>Amount: <span id="a6">0</span> [<span id="p6">0</span>]<br>Income: <span id="i6">0</span></button>
 <button onclick="buy(7)" id="b7">Level 7 x<span id="m7">1</span><br>Cost: <span id="c7">1e18</span><br>Amount: <span id="a7">0</span> [<span id="p7">0</span>]<br>Income: <span id="i7">0</span></button>
 <button onclick="buy(8)" id="b8">Level 8 x<span id="m8">1</span><br>Cost: <span id="c8">1e23</span><br>Amount: <span id="a8">0</span> [<span id="p8">0</span>]</button>
+<button onclick="buy(9)" id="b9">Level 9 x<span id="m9">1</span><br>Cost: <span id="c9">1e28</span><br>Amount: <span id="a9">0</span> [<span id="p9">0</span>]</button>	
 <br><div id="prestigeInfo" style="display:none">You have x<span id="prestigeBoost">1</span> boost for all production from prestige.</div>
 <br><button onclick="prestige()" id="prestigeButton" style="display:none">Reset the game to get a production increase. x<span id="prestmult">1.000</span></button>
 <button id="UCButton" onclick="upgrade()" style="display:none">Transform your coins into upgrade coins to make the game faster. +<span id="UCAmount">0</span> UC</button>
