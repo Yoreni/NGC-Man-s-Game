@@ -5,20 +5,26 @@
 var suffixes = "KMBTqQsSONdUD"
 function format(x) 
 {
-	var e = Math.floor(Math.log10(x));
-	var m = Math.pow(10,Math.log10(x)-e);
+	var e = Math.floor(Math.log10(x) / 3) * 3
+	var m = x / Math.pow(10,e) 
 	if(x < 1000) return Math.round(x);
 	else if(x < 1e42)
 	{
-		m = x / Math.pow(10,Math.floor(e / 3));
 		m = Math.floor(m * 100) / 100;
-		return m + suffixes[Math.floor(e / 3)];
+		return m + suffixes[Math.floor(e / 3) - 1];
 	}
-	else
+	else if(x < 1e1000000)
 	{
+                e = Math.floor(Math.log10(x));
 		m = Math.floor(m * 100) / 100;
-		return m + "e" + e
+		return m + "e" + e;
 	}
+        else
+        {
+            e = Math.floor(Math.log10(x));
+            a = Math.floor(e * 1000) / 1000;
+            return "e" + a + suffixes[Math.floor(Math.log10(e) / 3) - 1];
+        }
 }
 //init
 var coins = 1;
