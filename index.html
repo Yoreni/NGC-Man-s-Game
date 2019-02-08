@@ -3,12 +3,22 @@
 <script type="text/javascript" src="break_infinity.js"></script>
 <script>
 var suffixes = "KMBTqQsSONdUD"
-function format(a) 
+function format(x) 
 {
+	var e = Math.floor(Math.log10(a));
+	var m = Math.pow(10,Math.log10(a)-exponent);
 	if(a < 1000) return Math.round(a);
-	var exponent = Math.floor(Math.log10(a));
-	var mantissa = Math.round(1000*Math.pow(10,log10(a)-exponent))/1000;
-	return mantissa+"e"+exponent
+	else if(a < 1e42)
+	{
+		m = x / Math.pow(10,Math.floor(e / 3));
+		m = Math.floor(m * 100) / 100;
+		return m + suffixes[Math.floor(e / 3)];
+	}
+	else
+	{
+		m = Math.floor(m * 100) / 100;
+		return m + "e" + e
+	}
 }
 //init
 var coins = 1;
