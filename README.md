@@ -1,3 +1,3 @@
 Credit to Patashu for Break_infinity.js, and credit to username5243 for the base code.
 
-Play it at: https://raw.githack.com/NGCMan/NGC-Man-s-Game/master/game.html
+Play it at: https://yoreni.github.io/NGC-Man-s-Game/
