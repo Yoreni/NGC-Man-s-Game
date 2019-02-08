@@ -5,10 +5,10 @@
 var suffixes = "KMBTqQsSONdUD"
 function format(x) 
 {
-	var e = Math.floor(Math.log10(a));
-	var m = Math.pow(10,Math.log10(a)-exponent);
-	if(a < 1000) return Math.round(a);
-	else if(a < 1e42)
+	var e = Math.floor(Math.log10(x));
+	var m = Math.pow(10,Math.log10(x)-e);
+	if(x < 1000) return Math.round(x);
+	else if(x < 1e42)
 	{
 		m = x / Math.pow(10,Math.floor(e / 3));
 		m = Math.floor(m * 100) / 100;
